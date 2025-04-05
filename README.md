@@ -11,14 +11,14 @@ A topologia implementada é uma **rede estrela**, onde:
 - A topologia estrela foi escolhida por sua simplicidade, facilidade de manutenção e pela vantagem de que se um computador falhar, os outros continuam funcionando normalmente
 
 ## Endereçamento IP Utilizado
-Todos os dispositivos estão configurados na mesma sub-rede (192.168.10.0/24):
+Todos os dispositivos estão configurados na mesma sub-rede (192.168.1.0/24):
 
 | Dispositivo | Nome | Endereço IP | Máscara de Sub-rede | Gateway Padrão |
 |-------------|------|-------------|---------------------|----------------|
-| PC1 | Técnico_Som | 192.168.10.10 | 255.255.255.0 | 192.168.10.1 |
-| PC2 | Iluminação | 192.168.10.11 | 255.255.255.0 | 192.168.10.1 |
-| PC3 | Coordenação | 192.168.10.12 | 255.255.255.0 | 192.168.10.1 |
-| PC4 | Direção | 192.168.10.13 | 255.255.255.0 | 192.168.10.1 |
+| PC1 | Técnico_Som | 192.168.1.11 | 255.255.255.0 | 192.168.1.1 |
+| PC2 | Iluminação | 192.168.1.12 | 255.255.255.0 | 192.168.1.1 |
+| PC3 | Coordenação | 192.168.1.13 | 255.255.255.0 | 192.168.1.1 |
+| PC4 | Direção | 192.168.1.14 | 255.255.255.0 | 192.168.1.1 |
 
 ## Equipamentos Virtuais Utilizados
 - 1 Switch Cisco 2960 (ou similar)
@@ -29,9 +29,9 @@ Todos os dispositivos estão configurados na mesma sub-rede (192.168.10.0/24):
 Foram realizados testes de ping entre todos os dispositivos da rede, confirmando a conectividade total. Resultados:
 
 - Do PC "Técnico_Som" para:
-  - "Iluminação" (192.168.10.11): 4 pacotes enviados, 4 recebidos (100% sucesso)
-  - "Coordenação" (192.168.10.12): 4 pacotes enviados, 4 recebidos (100% sucesso)
-  - "Direção" (192.168.10.13): 4 pacotes enviados, 4 recebidos (100% sucesso)
+  - "Iluminação" (192.168.1.12): 4 pacotes enviados, 4 recebidos (100% sucesso)
+  - "Coordenação" (192.168.1.13): 4 pacotes enviados, 4 recebidos (100% sucesso)
+  - "Direção" (192.168.1.14): 4 pacotes enviados, 4 recebidos (100% sucesso)
 
 - Todos os outros PCs também conseguiram se comunicar entre si com 100% de sucesso nos testes de ping.
 
@@ -53,10 +53,10 @@ Foram realizados testes de ping entre todos os dispositivos da rede, confirmando
 3. Abra o "Command Prompt"
 4. Execute o comando `ping` seguido do endereço IP de outro computador da rede:
    ```
-   ping 192.168.10.10
-   ping 192.168.10.11
-   ping 192.168.10.12
-   ping 192.168.10.13
+   ping 192.168.1.11
+   ping 192.168.1.12
+   ping 192.168.1.13
+   ping 192.168.1.14
    ```
 5. Verifique se todos os pings têm resposta, confirmando que a comunicação está funcionando corretamente
 
